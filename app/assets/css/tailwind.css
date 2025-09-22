@@ -147,3 +147,8 @@
     @apply iconify;
   }
 }
+@layer utilities {
+  .link-accent {
+    @apply cursor-pointer hover:text-accent active:text-accent transition-colors;
+  }
+}

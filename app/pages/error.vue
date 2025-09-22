@@ -1,13 +1,7 @@
 <template>
-  <div>
-    
-  </div>
+  <div>error</div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup></script>
 
-</script>
-
-<style>
-
-</style>
+<style></style>
