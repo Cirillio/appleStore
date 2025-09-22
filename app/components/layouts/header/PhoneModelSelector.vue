@@ -1,4 +1,10 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import type { PhoneModelGroup } from "~/types/product";
+
+defineProps<{
+  phoneModels: PhoneModelGroup[];
+}>();
+</script>
 
 <template>
   <dropdown-menu>
@@ -13,15 +19,21 @@
       class="pl-3 pr-6 bg-background shadow-sm !border-0 !border-t border-primary min-w-60 !rounded-t-none"
     >
       <accordion collapsible type="multiple" class="font-medium">
-        <accordion-item value="apple">
+        <accordion-item
+          v-for="m in phoneModels"
+          :key="m.manufacturer.id"
+          :value="m.manufacturer.id"
+        >
           <accordion-trigger
             class="hover:!no-underline py-3 cursor-pointer text-base"
-            >Apple</accordion-trigger
+            >{{ m.manufacturer.name }}</accordion-trigger
           >
           <accordion-content>
             <ul class="flex flex-col gap-0.5 px-3 border-t border-primary py-2">
-              <li class="link-accent">
-                <nuxt-link to="/apple/iphone-12">iPhone 12</nuxt-link>
+              <li v-for="p in m.models" :key="p.id" class="link-accent">
+                <nuxt-link :to="'/' + m.manufacturer.id + '/' + p.id">{{
+                  p.name
+                }}</nuxt-link>
               </li>
             </ul>
           </accordion-content>

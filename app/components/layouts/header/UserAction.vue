@@ -3,7 +3,7 @@
     <slot name="icon" />
     <div
       v-if="notification"
-      class="bg-accent size-4 select-none flex rounded-full -top-1 -right-2 text-xs items-center justify-center absolute text-white font-medium"
+      class="bg-accent size-4 pointer-events-none select-none flex rounded-full -top-1 -right-2 text-xs items-center justify-center absolute text-white font-medium"
     >
       {{ notification }}
     </div>
