@@ -1,26 +1,5 @@
 <script lang="ts" setup>
-const socialLinks = [
-  {
-    src: "/icons/telegram-svgrepo-com.svg",
-    alt: "Telegram",
-    link: "https://t.me/yourchannel",
-  },
-  {
-    src: "/icons/twitter-x-logo.svg",
-    alt: "Twitter",
-    link: "https://twitter.com/yourchannel",
-  },
-  {
-    src: "/icons/instagram-167-svgrepo-com.svg",
-    alt: "Instagram",
-    link: "https://www.instagram.com/yourchannel/",
-  },
-];
-
-const handleLinkClick = (event: MouseEvent, link: string) => {
-  event.preventDefault();
-  window.open(link, "_blank");
-};
+import { socialLinks } from "~/constants/social-links";
 </script>
 
 <template>
@@ -29,9 +8,12 @@ const handleLinkClick = (event: MouseEvent, link: string) => {
       v-for="socialLink in socialLinks"
       :key="socialLink.alt"
       :href="socialLink.link"
-      @click="handleLinkClick($event, socialLink.link)"
+      target="_blank"
     >
-      <img :src="socialLink.src" :alt="socialLink.alt" class="social-link" />
+      <component
+        :is="socialLink.icon"
+        class="size-6 hover:text-accent transition-colors"
+      />
     </a>
   </div>
 </template>

@@ -4,9 +4,9 @@
   <dropdown-menu>
     <dropdown-menu-trigger as-child>
       <Button variant="link" class="cursor-pointer">
-        <Solar icon="iphone-line-duotone" class="size-6 text-primary/50" />
+        <IPhoneOutline class="i size-6" />
         Выбрать модель телефона
-        <Solar icon="alt-arrow-down-line-duotone" class="size-4" />
+        <ChevronDown class="i size-4" />
       </Button>
     </dropdown-menu-trigger>
     <dropdown-menu-content

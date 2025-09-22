@@ -1,7 +1,15 @@
 <template>
-  <div class="flex gap-6 ml-auto">
-    <UserAction to="/favorites" icon="heart-outline" :notification="1" />
-    <UserAction to="cart" icon="bag-linear" :notification="1" />
+  <div class="flex gap-6 ml-auto *:hover:text-accent *:transition-colors">
+    <UserAction to="/favorites" :notification="1">
+      <template #icon>
+        <SolarHeartLinear class="i" />
+      </template>
+    </UserAction>
+    <UserAction to="/cart" :notification="1">
+      <template #icon>
+        <SolarCartOutline class="i" />
+      </template>
+    </UserAction>
   </div>
 </template>
 

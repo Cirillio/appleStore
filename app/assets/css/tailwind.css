@@ -144,7 +144,7 @@
   }
 
   .i {
-    @apply iconify;
+    @apply size-6 text-secondary;
   }
 }
 @layer utilities {

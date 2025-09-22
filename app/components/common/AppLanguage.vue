@@ -1,6 +1,6 @@
 <template>
   <div class="flex gap-3 font-medium">
-    <Solar icon="earth-linear" class="text-secondary size-6" />
+    <earth-linear class="i" />
     <span class="link-accent">Каз</span>
     <span class="link-accent">Рус</span>
     <span class="link-accent">Eng</span>

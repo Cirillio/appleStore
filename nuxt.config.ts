@@ -9,6 +9,16 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
+  nitro: {
+    prerender: {
+      routes: ["/sitemap.xml"],
+    },
+  },
+
+  routeRules: {
+    "/": { prerender: true },
+  },
+
   modules: [
     "shadcn-nuxt",
     "@vueuse/nuxt",
