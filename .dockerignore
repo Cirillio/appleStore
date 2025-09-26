@@ -1,0 +1,25 @@
+# Зависимости
+node_modules/
+
+# Nuxt build артефакты
+.nuxt/
+.output/
+dist/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Логи и временные файлы
+*.log
+npm-debug.log*
+.DS_Store
+
+# Docker файлы (не копируем их в контейнер)
+Dockerfile
+docker-compose.yml
+.dockerignore

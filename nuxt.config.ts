@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ["/sitemap.xml"],
+      routes: [],
     },
   },
 
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@vueuse/nuxt",
     "@pinia/nuxt",
-    "@formkit/auto-animate",
+    "@formkit/auto-animate/nuxt",
     "@nuxt/image",
     "@nuxtjs/google-fonts",
   ],
